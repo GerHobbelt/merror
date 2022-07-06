@@ -426,6 +426,10 @@ ReplaceAnnotations(const ConcretePolicy<P, B, A1>&, A2&& annotations) {
       std::forward<A2>(annotations));
 }
 
+#if defined(_MSC_VER)
+#define __attribute__(x)  /**/
+#endif
+
 // The most derived policy type.
 // TODO(romanp): replace __attribute__((warn_unused)) with a macro from
 // base/port.h or base/macros.h when one is added.

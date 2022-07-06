@@ -20,6 +20,7 @@
 
 #include <ostream>
 #include <streambuf>
+#include <assert>
 
 namespace merror::internal {
 
