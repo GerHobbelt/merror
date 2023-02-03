@@ -91,7 +91,7 @@
                            MERROR_INTERNAL_IS_VARIADIC_C __VA_ARGS__))
 
 // Helpers for the macros defined above.
-#define MERROR_INTERNAL_STRINGIZE_I(...) #__VA_ARGS__
+#define MERROR_INTERNAL_STRINGIZE_I(...) #__VA_ARGS__ ""
 #define MERROR_INTERNAL_10TH(_1, _2, _3, _4, _5, _6, _7, _8, _9, X, ...) X
 #define MERROR_INTERNAL_DETECT_UNDERSCORE_ ()
 #define MERROR_INTERNAL_FIRST(...) MERROR_INTERNAL_FIRST_I(__VA_ARGS__)

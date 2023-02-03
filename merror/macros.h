@@ -264,7 +264,7 @@
 //
 // See comments at the top of the file for more info.
 #define MERROR(...) \
-  MERROR_INTERNAL_MERROR("MERROR", #__VA_ARGS__, (MErrorDomain()), __VA_ARGS__)
+  MERROR_INTERNAL_MERROR("MERROR", "(" #__VA_ARGS__ ")", (MErrorDomain()), __VA_ARGS__)
 
 // If the specified expression is an error, returns an error (possibly of
 // different type than the passed expression).
@@ -280,7 +280,7 @@
 //
 // See comments at the top of the file for more info.
 #define MVERIFY(...)                                                      \
-  MERROR_INTERNAL_MVERIFY_IMPL("MVERIFY", #__VA_ARGS__, (MErrorDomain()), \
+  MERROR_INTERNAL_MVERIFY_IMPL("MVERIFY", "(" #__VA_ARGS__ ")", (MErrorDomain()), \
                                __VA_ARGS__)
 
 // If the specified expression is an error, returns an error (possibly of
@@ -312,7 +312,7 @@
 //
 // See comments at the top of the file for more info.
 #define MTRY(...)                                                             \
-  MERROR_INTERNAL_APPLY_VARIADIC(MERROR_INTERNAL_MTRY_, "MTRY", #__VA_ARGS__, \
+  MERROR_INTERNAL_APPLY_VARIADIC(MERROR_INTERNAL_MTRY_, "MTRY", "(" #__VA_ARGS__ ")", \
                                  (MErrorDomain()), __VA_ARGS__)
 
 ///////////////////////////////////////////////////////////////////////////////
