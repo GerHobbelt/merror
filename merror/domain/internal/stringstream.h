@@ -20,7 +20,7 @@
 
 #include <ostream>
 #include <streambuf>
-#include <assert>
+#include <assert.h>
 
 namespace merror::internal {
 
